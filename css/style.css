@@ -14,7 +14,7 @@ body {
 .vlogin {
 	background: url(https://s-media-cache-ak0.pinimg.com/originals/11/03/ae/1103ae2300da9d504e9d7c5d20166002.jpg) no-repeat center center fixed; 
 	background-size: cover;
-    height: 700px;
+    height: 690px;
 
 }
 
@@ -46,7 +46,21 @@ LOGIN DIV AND SIGN UP BUTTON
     position: absolute;
     top: calc(50% - 75px);
     left: calc(50% - 50px);
-    height: 145px;
+    height: 202px;
+    width: 350px;
+    padding: 10px;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.41);
+    text-align: center;
+    border-radius: 20px;
+    
+}
+
+.loginReg {
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 50px);
+    height: 280px;
     width: 350px;
     padding: 10px;
     z-index: 2;
@@ -55,7 +69,8 @@ LOGIN DIV AND SIGN UP BUTTON
     border-radius: 20px;
 }
 
-.login input[type=text] {
+
+.login input[type=text], .loginReg input[type=text] {
     width: 250px;
     height: 30px;
     background: transparent;
@@ -68,7 +83,7 @@ LOGIN DIV AND SIGN UP BUTTON
     padding: 4px;
 }
 
-.login input[type=password] {
+.login input[type=password], .loginReg input[type=password] {
     width: 250px;
     height: 30px;
     background: transparent;
@@ -82,7 +97,21 @@ LOGIN DIV AND SIGN UP BUTTON
     margin-top: 10px;
 }
 
-.login input[type=button] {
+.loginReg input[type=email] {
+    width: 250px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 2px;
+    color: #fff;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 4px;
+    margin-top: 10px;
+}
+
+.login input[type=button], .loginReg input[type=button] {
     width: 260px;
     height: 35px;
     background: #fff;
@@ -95,6 +124,20 @@ LOGIN DIV AND SIGN UP BUTTON
     font-weight: 400;
     padding: 6px;
     margin-top: 10px;
+}
+
+/*PLACEHOLDERS  TEXT COLOR*/
+ ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+}
+:-ms-input-placeholder { /* IE 10+ */
+ color: white;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: white;
 }
 
 .login input[type=button]:hover{
@@ -134,7 +177,10 @@ LOGIN DIV AND SIGN UP BUTTON
     margin-top: 10px;
 }
 
-.register{
+
+
+
+#register{
     width: 260px;
     height: 35px;
     background: #493333;
@@ -155,13 +201,13 @@ a:-webkit-any-link {
     cursor: auto;
 }
 
-.register:link{
+#register:link{
     outline: none;
      list-style: none;
          color: inherit;
 }
 
-.register:visited{
+#register:visited{
     outline: none;
     text-decoration: none;
      list-style: none;
@@ -169,15 +215,15 @@ a:-webkit-any-link {
      
 }
 
-.register:hover{
+#register:hover{
 	opacity: 0.8;
 }
 
-.register:active{
+#register:active{
 	opacity: 0.6;
 }
 
-.register:focus{
+#register:focus{
 	outline: none;
 	border: 1px solid rgba(255,255,255,0.9);
 }
@@ -196,3 +242,4 @@ a:hover{
 a:active{
     list-style: none;
 }
+
