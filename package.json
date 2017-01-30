@@ -1,0 +1,23 @@
+{
+  "name": "for_isai",
+  "version": "1.0.0",
+  "description": "Real Time Chat Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uriel621/for_isai.git"
+  },
+  "author": "uriel621",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uriel621/for_isai/issues"
+  },
+  "homepage": "https://github.com/uriel621/for_isai#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "socket.io": "^1.7.2"
+  }
+}
