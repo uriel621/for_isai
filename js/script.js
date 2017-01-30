@@ -11,6 +11,10 @@ ever.config(["$routeProvider", function($routeProvider){
         templateUrl: "views/register.html",
         controller: "RegistrationController"
     }). 
+    when("/home", {
+        templateUrl: "views/home.html",
+        controller: "ChatController"
+    }).
     when("/success", {
         templateUrl: "views/success.html",
         controller: "SuccessController"

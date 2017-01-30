@@ -180,10 +180,25 @@ LOGIN DIV AND SIGN UP BUTTON
 
 
 
-#register{
+.registerButton{
     width: 260px;
     height: 35px;
     background: #493333;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #a18d6c;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px;
+    margin-top: 10px;
+}
+
+.loginButton {
+    width: 260px;
+    height: 35px;
+    background: #fff;
     border: 1px solid #fff;
     cursor: pointer;
     border-radius: 2px;
