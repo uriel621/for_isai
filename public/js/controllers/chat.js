@@ -4,6 +4,6 @@ ever.controller("ChatController", ["$scope", "$log", function($scope, $log){
         socket = io.connect("http://localhost:3000");
         console.log(socket);
         socket.on("MyEvent", function(message){
-            alert(message);
+            $log.info(message);
         });
 }]);
