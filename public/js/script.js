@@ -5,7 +5,7 @@ ever.config(["$routeProvider", function($routeProvider){
 
     when("/login", {
         templateUrl: "views/login.html",
-        controller: "RegistrationController"
+        controller: "loginController"
     }). 
     when("/register", {
         templateUrl: "views/register.html",

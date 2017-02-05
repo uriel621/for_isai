@@ -1,3 +1,3 @@
-// ever.controller('SuccessController', ['$scope', function($scope) {
-//   $scope.message = "Success!!!";
-// }]);
+ever.controller('SuccessController', ['$scope', function($scope) {
+    alert("SuccessController Here")
+}]);

@@ -1,5 +1,3 @@
-ever.controller("RegistrationController", ["$scope", "$log",  function($scope, $log){
-    
-    $log.log("621")
-
-}]) 
+ever.controller("RegistrationController", ["$scope", function($scope){
+    alert("RegistrationController Here")
+}]);
