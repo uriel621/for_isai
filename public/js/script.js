@@ -1,25 +1,25 @@
 var ever = angular.module("forIsai", ["ngRoute"]);
 
 ever.config(["$routeProvider", function($routeProvider){
-    $routeProvider.
+    $routeProvider
 
-    when("/login", {
+    .when("/login", {
         templateUrl: "views/login.html",
-        controller: "loginController"
-    }). 
-    when("/register", {
+        controller: "LoginController"
+    }) 
+    .when("/register", {
         templateUrl: "views/register.html",
         controller: "RegistrationController"
-    }). 
-    when("/home", {
+    }) 
+    .when("/home", {
         templateUrl: "views/home.html",
         controller: "ChatController"
-    }).
-    when("/success", {
+    })
+    .when("/success", {
         templateUrl: "views/success.html",
         controller: "SuccessController"
-    }). 
-    otherwise({
+    }) 
+    .otherwise({
         redirectTo: "/login"
     });
 }]);
