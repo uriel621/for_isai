@@ -1,4 +1,4 @@
 ever.controller("RegistrationController", ["$scope", function($scope){
-    alert("RegistrationController Here")
+    console.log("RegistrationController Here")
     $scope.message = "Registration Page";
 }]);

@@ -1,4 +1,4 @@
 ever.controller("LoginController", ["$scope", function($scope){
-    alert("LoginController Here");
+    console.log("LoginController Here");
     $scope.message = "Log In Page";
 }]);
