@@ -62,6 +62,7 @@ var socket = io.connect('http://localhost:3000');
 
 $('#send_button').click(function(){
     socket.emit('chat message', $('#messages_textarea').val());
+    console.log($('#messages_textarea').val());
     $('#messages_textarea').val('');
     return false;
 });
