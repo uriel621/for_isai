@@ -8,8 +8,8 @@ var io = require('socket.io')(http);
 app.use(express.static(__dirname + '/src'));
 
 app.get("*", function(req, res){
-    res.redirect("src/index.html")
-})
+    res.redirect("src/index.html");
+});
 
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
