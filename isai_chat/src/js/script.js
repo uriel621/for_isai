@@ -14,10 +14,12 @@
             send_button();
         }()),
         message_function: (function () {
-           
+            communication();
         }())
     };
 })();
+
+//------------------------
 
 function chat_area () {
     const uriel621 = document.querySelector("#uriel621");
@@ -32,6 +34,8 @@ function chat_message () {
     chat_ul.setAttribute("id", "chat_messages");
     chat_area.appendChild(chat_ul);
 }
+
+//------------------------
 
 function message () {
     const uriel621 = document.querySelector("#uriel621");
@@ -58,16 +62,25 @@ function send_button () {
 }
 
 //------------------------
-var socket = io.connect('http://localhost:3000');
 
-$('#send_button').click(function(){
-    socket.emit('chat message', $('#messages_textarea').val());
-    console.log($('#messages_textarea').val());
-    $('#messages_textarea').val('');
-    return false;
-});
-socket.on('chat message', function(msg){
-    $('#chat_messages').append($('<li>').text(msg));
-    console.log(msg);
-});
+function communication () {
+    const socket = io.connect(); 
+    const send_button = document.querySelector("#send_button");
+    const messages_textarea = document.querySelector("#messages_textarea");
+    const chat_ul = document.querySelector("#chat_messages");
+    const chat_li = document.createElement("li");
+    chat_li.setAttribute("")
+    
+    
+    send_button.addEventListener("click", function(){
+        alert("clicked")
+        socket.emit('chat message', messages_textarea.value);
+        messages_textarea.value = "";
+        return false;
+    });
 
+    socket.on('chat message', function(msg){
+       $(chat_ul).append($(chat_li).html(msg));
+        console.log(msg);
+    });
+}
