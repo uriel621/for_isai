@@ -1,0 +1,30 @@
+#message_view {
+    height:300px; 
+    overflow-x:hidden; 
+    overflow-y: auto; 
+    width:100%; 
+    border-width: 1px; 
+    border-style: solid; 
+    border-color: rgb(204, 204, 204); 
+    border-image: initial;
+}
+
+#chat_messages {
+    text-align: left;
+    list-style-type: none;
+    font-size: 1.5em;
+    font-family: helvetica;
+    margin: 0px;
+    padding: 0px;
+}
+/*-----------------------------------------------------------*/
+#message_write {
+    background: none 0px 0px repeat scroll rgb(245, 243, 243);
+    padding: 15px;
+    height: 115px;
+}
+
+#messages_textarea {
+    height: auto;
+    resize: none;
+}
