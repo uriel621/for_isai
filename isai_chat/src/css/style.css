@@ -17,6 +17,13 @@
     margin: 0px;
     padding: 0px;
 }
+
+#chat_messages > li:nth-child(odd) {
+    background-color: gray
+}
+#chat_messages > li:nth-child(even) {
+    background-color: white
+}
 /*-----------------------------------------------------------*/
 #message_write {
     background: none 0px 0px repeat scroll rgb(245, 243, 243);

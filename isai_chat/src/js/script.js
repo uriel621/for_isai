@@ -3,11 +3,18 @@
     return {
         init: (function () {
             document.querySelector("#uriel621").setAttribute("class", "container");
+        }()),
+        message_view: (function () {
             chat_area();
             chat_message();
+        }()),
+        message_write: (function () {
             message();
             messages_textarea();
             send_button();
+        }()),
+        message_function: (function () {
+           
         }())
     };
 })();
@@ -15,7 +22,7 @@
 function chat_area () {
     const uriel621 = document.querySelector("#uriel621");
     const chat_div = document.createElement("div");
-    chat_div.setAttribute("id", "message_view")
+    chat_div.setAttribute("id", "message_view");
     uriel621.appendChild(chat_div);
 }
 
@@ -45,6 +52,21 @@ function send_button () {
     const message_write = document.querySelector("#message_write");
     const send_button = document.createElement("button");
     send_button.setAttribute("class", "pull-right btn btn-success");
+    send_button.setAttribute("id", "send_button");
     send_button.innerHTML = "Send";
     message_write.appendChild(send_button);
 }
+
+//------------------------
+var socket = io();
+
+$('#send_button').click(function(){
+    console.log("clicked")
+    socket.emit('chat message', $('#messages_textarea').val());
+    $('#messages_textarea').val('');
+    return false;
+});
+socket.on('chat message', function(msg){
+    $('#chat_messages').append($('<li>').text(msg));
+});
+
