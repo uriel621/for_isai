@@ -58,15 +58,15 @@ function send_button () {
 }
 
 //------------------------
-var socket = io();
+var socket = io.connect('http://localhost:3000');
 
 $('#send_button').click(function(){
-    console.log("clicked")
     socket.emit('chat message', $('#messages_textarea').val());
     $('#messages_textarea').val('');
     return false;
 });
 socket.on('chat message', function(msg){
     $('#chat_messages').append($('<li>').text(msg));
+    console.log(msg);
 });
 
